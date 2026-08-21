@@ -9,9 +9,10 @@ A deep learning NLP application that classifies text into six emotions using a B
 
 ## Live Demo
 
-- **Application Web UI:** `https://<your-render-service>.onrender.com` *(Replace with actual URL after deployment)*
-- **API Endpoint:** `https://<your-render-service>.onrender.com/predict`
-- **Health Check:** `https://<your-render-service>.onrender.com/health`
+- **Application Web UI:** https://emotion-classification-with-bigru.onrender.com
+- **API Endpoint:** https://emotion-classification-with-bigru.onrender.com/predict
+- **Health Check:** https://emotion-classification-with-bigru.onrender.com/health
+- **Interactive API Docs:** https://emotion-classification-with-bigru.onrender.com/docs
 
 ## Overview
 
