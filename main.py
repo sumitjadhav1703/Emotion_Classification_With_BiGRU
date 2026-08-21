@@ -87,6 +87,10 @@ class PredictionResponse(BaseModel):
     all_probabilites: dict[str, float]
 
 class HealthResponse(BaseModel):
+    model_config = {
+        "protected_namespaces": ()
+    }
+
     status: str
     model_loaded: bool
 
@@ -99,7 +103,7 @@ dl_model = {} #{1. BiGRU, 2. Tokenizer}-> True , {} -> False
 @asynccontextmanager
 async def lifespan(app: FastAPI):
     print('Loading the model and tokenizer...')
-    dl_model["BiGRU"] = load_model(model_path)                      #BiGRU Model
+    dl_model["BiGRU"] = load_model(model_path, compile=False)                      #BiGRU Model
     with open(tokenizer_path, 'rb') as file:
         dl_model["Tokenizer"] = pickle.load(file)
     print('Model are loaded successfully...')   
